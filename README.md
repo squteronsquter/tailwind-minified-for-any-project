@@ -78,6 +78,51 @@ npm run start-css
 npm run watch-css
 npm run prod-css
 ```
+## Customize tailwind (colors, fonts, sizes, etc.) by editing tailwind.config.js
+
+### First import custom fonts to tailwind.css
+
+```
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+
+### Then edit tailwind.config.js
+
+```
+module.exports = {
+  mode: 'jit',
+  purge: ['../*.html'],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {
+      colors: {
+        primary: '#FF6363',
+        secondary: {
+          100: '#E2E2D5',
+          200: '#888883',
+        }
+      },
+      fontFamily: {
+        body: ['PT Sans'],
+      }
+
+  },
+      fontSize: {
+        mommoth: ['14rem', { lineHeight: '22rem' }],
+      },
+    },
+
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+```
 
 ## That's it!
 
