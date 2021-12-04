@@ -1,0 +1,19 @@
+{
+  "name": "tailwind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-css": "tailwindcss build tailwind.css -o ../app.css",
+    "watch-css": "tailwindcss -i tailwind.css -o ../app.css --watch",
+    "prod-css": "tailwindcss -i tailwind.css -o ../app.min.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4",
+    "tailwindcss": "^2.2.19"
+  }
+}
